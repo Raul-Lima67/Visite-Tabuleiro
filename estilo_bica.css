@@ -1,0 +1,421 @@
+/* Reset geral */
+* {
+  box-sizing: border-box; /* Melhora o controle de largura e altura */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif; /* Fonte padrão */
+}
+
+/* Estilo do cabeçalho fixo */
+
+#tituloPagina {
+  font-size: 50px;
+  color: #086b32;
+}
+
+#nomeLogo {
+  color: #0E8946; /* Cor do texto */
+ 
+}
+
+#cabeçalho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: top 0.3s;
+}
+
+.nav01 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: #ffffff;
+}
+
+#logojunta {
+  display: flex;
+  align-items: center;
+}
+
+#fotologo {
+  width: 40px;
+  height: 40px;
+}
+
+/* Links da navegação */
+.nav-link {
+  color: #0E8946;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+  margin: 0; /* Removendo qualquer espaçamento entre os links */
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  background-color: #0E8946;
+  color: white;
+  border-radius: 10px;
+}
+
+/* Linha abaixo do cabeçalho */
+.linha {
+  background-color: #0E8946;
+  width: 100%;
+  height: 3px;
+  margin: 0 auto;
+}
+
+/* Estilos gerais para a página */
+.container {
+  max-width: 800px;
+  margin: 60px auto 0; /* Adiciona espaço para o cabeçalho fixo */
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+header img {
+  height: 40px;
+}
+
+header nav a {
+  margin: 0 10px;
+  color: green;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+h2 {
+  margin: 20px 0;
+  color: green;
+  font-size: 30px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.image-placeholder {
+  width: 100%; /* A imagem ocupa toda a largura do contêiner */
+  height: auto; /* Mantém a proporção */
+  border-radius: 10px;
+  
+}
+
+/* Flexbox para alinhar imagem e descrição ao lado */
+#lado {
+  display: flex;
+  align-items: flex-start; /* Alinha a descrição ao topo da imagem */
+  gap: 20px; /* Espaço entre a imagem e o texto */
+}
+
+#lado img {
+  width: 45%; /* Limita a largura da imagem para não ultrapassar o lado */
+  height: auto;
+}
+
+#descricao {
+  width: 50%; /* O texto ocupa o restante do espaço */
+  display: flex;
+  flex-direction: column; /* Organiza o título e o texto verticalmente */
+  justify-content: flex-start; /* Alinha o conteúdo do texto ao topo */
+  margin-top: -25px;
+}
+
+/* Estilos para a galeria */
+/* Estilo da galeria */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  gap: 15px;
+  justify-items: center;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Transição suave */
+  max-width: 100%; /* Garante que as imagens se ajustem bem dentro do grid */
+  max-height: 200px;
+}
+
+.gallery-image {
+  border-radius: 10px;
+}
+
+/* Quando a imagem for clicada, ela aumentará */
+.gallery img.enlarged {
+  transform: scale(2.5); /* Aumenta a imagem 1.5 vezes */
+  z-index: 10; /* Coloca a imagem acima das outras */
+}
+
+#espaço{
+  
+  height: 40px;
+}
+
+/**=========================================================================*/
+/*COMENTARIOS*/
+
+/* Estilo para a área de comentários */
+.box {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 55%;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.box legend {
+  font-size: 20px;
+  color: #0E8946;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.divcomentarios {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.labelInput {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.inputUser {
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.inputUser:focus {
+  border-color: #0E8946;
+}
+
+textarea.inputUser {
+  resize: none;
+}
+
+#submit {
+  align-self: center;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #0E8946;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+  background-color: #086b32;
+}
+
+.image-container {
+  display: flex;
+  gap: 10px; /* Espaçamento entre as imagens */
+}
+
+.custom-image {
+  width: 300px; /* Define a largura desejada */
+  height: auto; /* Mantém a proporção da altura original */
+  border-radius: 15px; /* Bordas arredondadas */
+  display: block;
+}
+
+
+/*==========================================================================*/
+footer {
+  width: 100%;
+  color: rgb(29, 149, 47);
+}
+
+.footer-link {
+  text-decoration: none;
+}
+
+#footer_content {
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 3rem 3.5rem;
+}
+
+#footer_contacts h1 {
+  margin-bottom: 0.75rem;
+}
+
+#footer_social_media {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+#footer_social_media .footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: rgb(255, 255, 255);
+  border-radius: 40%;
+  transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {
+  font-size: 1.25rem;
+}
+
+#footer_social_media .footer-link:hover {
+  opacity: 0.8;
+}
+
+#logo_site_arvore{
+  width: 50px;
+  height: 50px;
+  margin-left: 70px; 
+  margin-top: 0px;
+}
+
+#contatos{
+  text-align: left;
+  text-indent: 55px;
+  margin-top: 35px;
+}
+
+#instagram {
+  background:linear-gradient( #7f37c9, #ff2992, #ff9807);
+}
+
+#whatsapp {
+  background-color: #25d366;
+}
+
+#facebook {
+  background-color: rgb(24, 93, 158);
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+
+}
+
+.footer-list .footer-link {
+  color: rgb(0, 0, 0);
+  transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+  color: rgb(29, 149, 47);
+}
+#segunda_coluna{
+  margin-top: 7.4%;
+}
+
+#footer_numsei {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: green;
+}
+
+#footer_copyright {
+display: flex;
+justify-content: center; /* Centraliza horizontalmente */
+align-items: center; /* Centraliza verticalmente */
+background-color: rgb(34, 34, 34); /* Um tom mais escuro para contraste */
+height: 50px; /* Altura mais consistente */
+color: white; /* Cor do texto */
+font-size: 14px; /* Tamanho da fonte */
+text-align: center; /* Centraliza o texto */
+padding: 10px; /* Adiciona um pequeno espaçamento interno */
+border-top: 2px solid #0E8946; /* Adiciona uma linha verde na parte superior */
+box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+}
+
+
+#textinho{
+  color: black;
+}
+
+#Lugares {
+color: green;
+
+}
+#logo_site_arvore {
+width: 50px;
+height: 50px;
+margin-left: 63px; 
+margin-top: 0px;
+border-radius: 50%; /* Torna a borda circular */
+border: 3px solid #0E8946; /* Borda com cor verde */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para efeito de destaque */
+transition: transform 0.3s ease; /* Transição suave quando o mouse passar sobre */
+}
+
+#logo_site_arvore:hover {
+transform: scale(1.1); /* Aumenta a imagem quando passar o mouse */
+}
+
+#textinho{
+    color: black;
+}
+
+#Lugares {
+  color: green;
+
+}
+
+/*
+.borda {
+  border: 1px solid #060606
+   
+}
+*/
+#logo_site_arvore {
+  width: 50px;
+  height: 50px;
+  margin-left: 63px; 
+  margin-top: 0px;
+  border-radius: 50%; /* Torna a borda circular */
+  border: 3px solid #0E8946; /* Borda com cor verde */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para efeito de destaque */
+  transition: transform 0.3s ease; /* Transição suave quando o mouse passar sobre */
+}
+
+#logo_site_arvore:hover {
+  transform: scale(1.1); /* Aumenta a imagem quando passar o mouse */
+}

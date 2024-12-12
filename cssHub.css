@@ -1,0 +1,374 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+    box-sizing: border-box; /* Melhora o controle de largura e altura */
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif; /* Fonte padrão */
+  }
+  
+  #logojunta{
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav01 {
+    margin: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaço entre os itens */
+    padding: 10px 70px; /* Espaçamento interno */
+    background-color: #ffffff; /* Cor de fundo do cabeçalho */
+  }
+  
+  #fotologo {
+    width: 40px; /* Aumenta um pouco o tamanho do logo */
+    height: 40px;
+  }
+  
+  #nomeLogo {
+    margin-left: 10px;
+    font-size: 30px; /* Ajusta o tamanho da fonte */
+    color: #0E8946; /* Cor do texto */
+    margin-top: 5px;
+  }
+  
+  .nav-link {
+    border-radius: 10px;
+    border-color: none;
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: #0E8946; /* Cor do link */
+    font-size: 18px; /* Tamanho da fonte do link */
+    padding: 10px 15px; /* Espaçamento ao redor do link */
+    transition: background-color 0.3s; /* Transição suave para hover */
+  }
+  
+  .nav-link:hover {
+    border-color: none;
+    border-radius: 10px;
+    background-color: #0E8946; /* Cor de fundo ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+  }
+  
+  .linha {
+    background-color: #0E8946;
+    width: 100%;
+    height: 3px;
+    margin: 0 auto; /* Centraliza a linha */
+  }
+  
+  #cabeçalho{
+    position: top;
+    transition: top 0.3s;
+    width: 100%;
+    height: 100px;
+  }
+/*cabeçalho*/
+/*=====================================================================================================================================*/
+
+/* Centralizar conteúdo e melhorar o design */
+.section {
+  max-width: 900px;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  padding: 20px;
+  text-align: justify;
+  background-color: #ffffff;
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estilo para o título */
+#tituloPagina {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0E8946;
+  font-size: 35px; /* Tamanho maior */
+  font-weight: bold;
+}
+
+/* Imagem e descrição */
+#lado {
+  display: flex;
+  align-items: flex-start; /* Alinha o topo de ambos os lados */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Ajustar a imagem */
+#primeiraImagem {
+  width: 45%; /* Ajusta para ocupar menos espaço */
+  border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Estilo para o texto ao lado da imagem */
+#descricao {
+  width: 55%; /* Deixa o texto alinhado ao lado da imagem */
+}
+
+#descricao h2 {
+  font-size: 22px;
+  color: #0E8946;
+  margin-bottom: 15px;
+}
+
+#descricao p {
+  line-height: 1.6; /* Melhora o espaçamento entre as linhas */
+  color: #333;
+}
+
+/* Texto geral */
+.descricao {
+  line-height: 1.8;
+  color: #555;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #lado {
+      flex-direction: column; /* Empilha os itens no mobile */
+      align-items: center;
+  }
+
+  #primeiraImagem {
+      width: 80%; /* Ajusta o tamanho no mobile */
+  }
+
+  #descricao {
+      width: 100%;
+      text-align: center; /* Centraliza o texto */
+  }
+}
+/*======================================================================================================================================*/
+.botao-imagem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px; /* Largura fixa */
+  padding: 10px;
+  border: 2px solid #ffffff; /* Borda branca */
+  border-radius: 10px; /* Borda arredondada */
+  background-color: #f8f9fa; /* Cor de fundo */
+  text-decoration: none; /* Remove sublinhado do texto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efeito 3D */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.botao-imagem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#imagensfodas {
+  width: 100%; /* Ajusta a largura da imagem ao container */
+  height: 250px; /* Altura fixa */
+  object-fit: cover; /* Garante que a imagem mantenha a proporção ao preencher o espaço */
+  border-radius: 8px; /* Borda arredondada da imagem */
+}
+
+.Span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #026C41; /* Verde escuro */
+  margin-top: 8px;
+  text-align: center;
+}
+
+.Clique {
+  font-size: 14px;
+  color: #7d7d7d; /* Cinza claro */
+  margin-top: 4px;
+  text-align: center;
+}
+
+.linhaVerdeFoda {
+  width: 100%;
+  height: 2px;
+  background-color: #026C41; /* Verde escuro */
+  margin: 10px 0;
+}
+
+
+
+
+/*======================================================================================================================================*/
+
+#faixaVerde {
+  display: flex; /* Ativa o Flexbox */
+  flex-direction: column; /* Alinha os itens em coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  justify-content: center; /* Centraliza os itens verticalmente */
+  width: 100%;
+  background-color: #0E8946;
+  height: 850px;
+  gap: 30px; /* Espaçamento entre os elementos */
+}
+
+#titulo02{
+  color: #ffffff;
+  font-size: 28px ;
+}
+
+.faixaMenorVerde {
+  background-color: #0E8946;
+  width: 100%;
+  height: 20px;
+  margin: 10px 0; /* Corrigido o uso do margin */
+}
+
+#fileiraAbaixo, #fileiraAcima {
+  display: flex; /* Ativa o Flexbox */
+  align-items: center; /* Centraliza os itens na vertical */
+  justify-content: center; /* Centraliza os itens na horizontal */
+  gap: 30px; /* Espaçamento entre os itens */
+}
+
+
+/*======================================================================================================================================*/
+/*footer*/
+
+*/
+footer {
+    width: 100%;
+    color: rgb(29, 149, 47);
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
+#footer_content {
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer_contacts h1 {
+    margin-bottom: 0.75rem;
+}
+
+#footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: rgb(255, 255, 255);
+    border-radius: 40%;
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {
+    font-size: 1.25rem;
+}
+
+#footer_social_media .footer-link:hover {
+    opacity: 0.8;
+}
+
+#logo_site_arvore{
+    width: 50px;
+    height: 50px;
+    margin-left: 70px; 
+    margin-top: 0px;
+}
+
+#contatos{
+    text-align: left;
+    text-indent: 55px;
+    margin-top: 35px;
+}
+
+#instagram {
+    background:linear-gradient( #7f37c9, #ff2992, #ff9807);
+}
+
+#whatsapp {
+    background-color: #25d366;
+}
+
+#facebook {
+    background-color: rgb(24, 93, 158);
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+
+}
+
+.footer-list .footer-link {
+    color: rgb(0, 0, 0);
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    color: rgb(29, 149, 47);
+}
+#segunda_coluna{
+    margin-top: 7.4%;
+}
+
+#footer_numsei {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: green;
+}
+
+#footer_copyright {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  background-color: rgb(34, 34, 34); /* Um tom mais escuro para contraste */
+  height: 50px; /* Altura mais consistente */
+  color: white; /* Cor do texto */
+  font-size: 14px; /* Tamanho da fonte */
+  text-align: center; /* Centraliza o texto */
+  padding: 10px; /* Adiciona um pequeno espaçamento interno */
+  border-top: 2px solid #0E8946; /* Adiciona uma linha verde na parte superior */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+}
+
+
+#textinho{
+    color: black;
+}
+
+#Lugares {
+  color: green;
+
+}
+#logo_site_arvore {
+  width: 50px;
+  height: 50px;
+  margin-left: 63px; 
+  margin-top: 0px;
+  border-radius: 50%; /* Torna a borda circular */
+  border: 3px solid #0E8946; /* Borda com cor verde */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para efeito de destaque */
+  transition: transform 0.3s ease; /* Transição suave quando o mouse passar sobre */
+}
+
+#logo_site_arvore:hover {
+  transform: scale(1.1); /* Aumenta a imagem quando passar o mouse */
+}
